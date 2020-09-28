@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         Semaphore semaphore = new Semaphore(3);
-        CountDownLatch countDownLatch = new CountDownLatch(10 + 1);
+        CountDownLatch countDownLatch = new CountDownLatch(10 + 2);
         new Uploader(semaphore, countDownLatch, 20, 500).start();
 
         for (int i = 1; i < 11; i++) {

@@ -15,7 +15,7 @@ public class Downloader extends Thread {
         this.speed = speed;
         this.downloaderNum = downloaderNum;
     }
-
+@Override
     public void run(){
         try {
             semaphore.acquire();

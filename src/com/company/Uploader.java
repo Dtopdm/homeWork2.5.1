@@ -15,10 +15,8 @@ public class Uploader extends Thread {
         this.speed = speed;
         this.file = file;
     }
-@Override
     public void run() {
         try {
-            countDownLatch.await();
             System.out.println("Загрузка файла на сервер");
             sleep(500/speed);
         } catch (InterruptedException e){
